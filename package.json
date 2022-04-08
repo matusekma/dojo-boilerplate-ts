@@ -4,10 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start:dev": "ts-node ./src/index.ts",
+    "start": "npm run build && node .",
     "build": "tsc --build",
     "watch": "tsc --watch",
-    "clean": "tsc --clean",
+    "clean": "tsc --build --clean",
     "test": "jest",
     "test-with-coverage": "jest --coverage"
   },
